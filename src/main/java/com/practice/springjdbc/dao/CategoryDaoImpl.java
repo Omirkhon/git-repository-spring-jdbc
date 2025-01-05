@@ -47,10 +47,10 @@ public class CategoryDaoImpl implements CategoryDao {
                         .filter(category -> category.getId() == id)
                         .findFirst()
                         .orElseThrow(() -> new NotFoundException("Категория не найдена."));
-                existing.getOptions().add(option);
+                existing.addOption(option);
             } else {
                 Category category = new Category(id, name);
-                category.getOptions().add(option);
+                category.addOption(option);
                 categories.add(category);
             }
         }

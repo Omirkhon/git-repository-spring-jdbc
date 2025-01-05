@@ -17,4 +17,8 @@ public class Category {
     int id;
     String name;
     final List<Option> options = new ArrayList<>();
+
+    public void addOption(Option option) {
+        this.options.add(option);
+    }
 }
